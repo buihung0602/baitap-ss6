@@ -1,23 +1,19 @@
 #include <stdio.h>
-int a,b,c,d,e,sum=0;
-int main () {
-	printf("nhap vao 5 so nguyen: \n");
-	scanf("%d %d %d %d %d",&a,&b,&c,&d,&e);
-	if (a%2!=0) {
-		sum+=a;
-	}
-	if (b%2!=0) {
-		sum+=b;
-	}
-	if (c%2!=0) {
-		sum+=c;
-	}
-	if (d%2!=0) {
-		sum+=d;
-	}
-	if (e%2!=0) {
-		sum+=e;
-	}
-	printf("tong cac so le la: %d",sum);
-	return 0;
-} 
+
+int main() {
+    int so, sum = 0;
+
+    for (int i = 0; i < 5; i++) {
+        printf("nhap so nguyen thu %d: ", i + 1);
+        scanf("%d", &so);
+
+        if (so % 2 != 0) {
+            sum += so;
+        }
+    }
+
+    printf("tong cac so le la: %d\n",sum);
+    
+    return 0;
+}
+
